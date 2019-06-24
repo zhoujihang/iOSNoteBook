@@ -1,0 +1,16 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'iOSNoteBook' do
+
+  pod 'Masonry'
+
+  target 'iOSNoteBookTests' do
+    inherit! :search_paths
+  end
+
+  target 'iOSNoteBookUITests' do
+    inherit! :search_paths
+  end
+
+end

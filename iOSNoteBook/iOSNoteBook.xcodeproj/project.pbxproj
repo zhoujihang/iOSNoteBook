@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		475CE64722C06C4B00511163 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE64622C06C4B00511163 /* AppDelegate.m */; };
+		475CE64A22C06C4B00511163 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE64922C06C4B00511163 /* ViewController.m */; };
+		475CE64D22C06C4B00511163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475CE64B22C06C4B00511163 /* Main.storyboard */; };
+		475CE64F22C06C4D00511163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 475CE64E22C06C4D00511163 /* Assets.xcassets */; };
+		475CE65222C06C4D00511163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475CE65022C06C4D00511163 /* LaunchScreen.storyboard */; };
+		475CE65522C06C4D00511163 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE65422C06C4D00511163 /* main.m */; };
+		475CE65F22C06C4D00511163 /* iOSNoteBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE65E22C06C4D00511163 /* iOSNoteBookTests.m */; };
+		475CE66A22C06C4D00511163 /* iOSNoteBookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE66922C06C4D00511163 /* iOSNoteBookUITests.m */; };
+		475CE67D22C06F9400511163 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE67C22C06F9400511163 /* RuntimeKit.m */; };
+		475CE68022C0AE0700511163 /* RuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE67F22C0AE0600511163 /* RuntimeTest.m */; };
+		51B12DA7D373B13A86743940 /* Pods_iOSNoteBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F537EBECAA1A78F0DBB59D4 /* Pods_iOSNoteBook.framework */; };
+		54245945097750F4D609411A /* Pods_iOSNoteBookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3309FB46E3BA284BE1973D75 /* Pods_iOSNoteBookUITests.framework */; };
+		EF55180523DF37B8418F6E4D /* Pods_iOSNoteBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5927F5CABB6974A5F1CCF17F /* Pods_iOSNoteBookTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		475CE65B22C06C4D00511163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 475CE63A22C06C4A00511163 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 475CE64122C06C4B00511163;
+			remoteInfo = iOSNoteBook;
+		};
+		475CE66622C06C4D00511163 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 475CE63A22C06C4A00511163 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 475CE64122C06C4B00511163;
+			remoteInfo = iOSNoteBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E9C6D8938DBFD7AE548A1C5 /* Pods-iOSNoteBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBookTests.release.xcconfig"; path = "Target Support Files/Pods-iOSNoteBookTests/Pods-iOSNoteBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F23829099335EBB34B99EE6 /* Pods-iOSNoteBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBookUITests.release.xcconfig"; path = "Target Support Files/Pods-iOSNoteBookUITests/Pods-iOSNoteBookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F537EBECAA1A78F0DBB59D4 /* Pods_iOSNoteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSNoteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3309FB46E3BA284BE1973D75 /* Pods_iOSNoteBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSNoteBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		420563B9E8A9AC0C0B09E354 /* Pods-iOSNoteBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBookTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSNoteBookTests/Pods-iOSNoteBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		475CE64222C06C4B00511163 /* iOSNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		475CE64522C06C4B00511163 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		475CE64622C06C4B00511163 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		475CE64822C06C4B00511163 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		475CE64922C06C4B00511163 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		475CE64C22C06C4B00511163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		475CE64E22C06C4D00511163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		475CE65122C06C4D00511163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		475CE65322C06C4D00511163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475CE65422C06C4D00511163 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		475CE65A22C06C4D00511163 /* iOSNoteBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNoteBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		475CE65E22C06C4D00511163 /* iOSNoteBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNoteBookTests.m; sourceTree = "<group>"; };
+		475CE66022C06C4D00511163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475CE66522C06C4D00511163 /* iOSNoteBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSNoteBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		475CE66922C06C4D00511163 /* iOSNoteBookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSNoteBookUITests.m; sourceTree = "<group>"; };
+		475CE66B22C06C4D00511163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475CE67B22C06F9400511163 /* RuntimeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
+		475CE67C22C06F9400511163 /* RuntimeKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
+		475CE67E22C0AE0600511163 /* RuntimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTest.h; sourceTree = "<group>"; };
+		475CE67F22C0AE0600511163 /* RuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest.m; sourceTree = "<group>"; };
+		4B12B4B1DDBF319537BCFC5C /* Pods-iOSNoteBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBook.release.xcconfig"; path = "Target Support Files/Pods-iOSNoteBook/Pods-iOSNoteBook.release.xcconfig"; sourceTree = "<group>"; };
+		5927F5CABB6974A5F1CCF17F /* Pods_iOSNoteBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSNoteBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E588A13956A38AD8A4A50AD4 /* Pods-iOSNoteBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBook.debug.xcconfig"; path = "Target Support Files/Pods-iOSNoteBook/Pods-iOSNoteBook.debug.xcconfig"; sourceTree = "<group>"; };
+		F9590C0E4878A6991C668422 /* Pods-iOSNoteBookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBookUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSNoteBookUITests/Pods-iOSNoteBookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		475CE63F22C06C4B00511163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51B12DA7D373B13A86743940 /* Pods_iOSNoteBook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475CE65722C06C4D00511163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF55180523DF37B8418F6E4D /* Pods_iOSNoteBookTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475CE66222C06C4D00511163 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54245945097750F4D609411A /* Pods_iOSNoteBookUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		475CE63922C06C4A00511163 = {
+			isa = PBXGroup;
+			children = (
+				475CE64422C06C4B00511163 /* iOSNoteBook */,
+				475CE65D22C06C4D00511163 /* iOSNoteBookTests */,
+				475CE66822C06C4D00511163 /* iOSNoteBookUITests */,
+				475CE64322C06C4B00511163 /* Products */,
+				BBB7EC9D143F0479AFB7B700 /* Pods */,
+				B2CE9AF3C94DC4CA5512BDA9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		475CE64322C06C4B00511163 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				475CE64222C06C4B00511163 /* iOSNoteBook.app */,
+				475CE65A22C06C4D00511163 /* iOSNoteBookTests.xctest */,
+				475CE66522C06C4D00511163 /* iOSNoteBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		475CE64422C06C4B00511163 /* iOSNoteBook */ = {
+			isa = PBXGroup;
+			children = (
+				475CE64522C06C4B00511163 /* AppDelegate.h */,
+				475CE64622C06C4B00511163 /* AppDelegate.m */,
+				475CE64822C06C4B00511163 /* ViewController.h */,
+				475CE64922C06C4B00511163 /* ViewController.m */,
+				475CE67A22C06F8800511163 /* Runtime */,
+				475CE67722C06E6800511163 /* File Supports */,
+			);
+			path = iOSNoteBook;
+			sourceTree = "<group>";
+		};
+		475CE65D22C06C4D00511163 /* iOSNoteBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				475CE65E22C06C4D00511163 /* iOSNoteBookTests.m */,
+				475CE66022C06C4D00511163 /* Info.plist */,
+			);
+			path = iOSNoteBookTests;
+			sourceTree = "<group>";
+		};
+		475CE66822C06C4D00511163 /* iOSNoteBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				475CE66922C06C4D00511163 /* iOSNoteBookUITests.m */,
+				475CE66B22C06C4D00511163 /* Info.plist */,
+			);
+			path = iOSNoteBookUITests;
+			sourceTree = "<group>";
+		};
+		475CE67722C06E6800511163 /* File Supports */ = {
+			isa = PBXGroup;
+			children = (
+				475CE64B22C06C4B00511163 /* Main.storyboard */,
+				475CE64E22C06C4D00511163 /* Assets.xcassets */,
+				475CE65022C06C4D00511163 /* LaunchScreen.storyboard */,
+				475CE65322C06C4D00511163 /* Info.plist */,
+				475CE65422C06C4D00511163 /* main.m */,
+			);
+			name = "File Supports";
+			sourceTree = "<group>";
+		};
+		475CE67A22C06F8800511163 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				475CE67B22C06F9400511163 /* RuntimeKit.h */,
+				475CE67C22C06F9400511163 /* RuntimeKit.m */,
+				475CE67E22C0AE0600511163 /* RuntimeTest.h */,
+				475CE67F22C0AE0600511163 /* RuntimeTest.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		B2CE9AF3C94DC4CA5512BDA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F537EBECAA1A78F0DBB59D4 /* Pods_iOSNoteBook.framework */,
+				5927F5CABB6974A5F1CCF17F /* Pods_iOSNoteBookTests.framework */,
+				3309FB46E3BA284BE1973D75 /* Pods_iOSNoteBookUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBB7EC9D143F0479AFB7B700 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E588A13956A38AD8A4A50AD4 /* Pods-iOSNoteBook.debug.xcconfig */,
+				4B12B4B1DDBF319537BCFC5C /* Pods-iOSNoteBook.release.xcconfig */,
+				420563B9E8A9AC0C0B09E354 /* Pods-iOSNoteBookTests.debug.xcconfig */,
+				0E9C6D8938DBFD7AE548A1C5 /* Pods-iOSNoteBookTests.release.xcconfig */,
+				F9590C0E4878A6991C668422 /* Pods-iOSNoteBookUITests.debug.xcconfig */,
+				2F23829099335EBB34B99EE6 /* Pods-iOSNoteBookUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		475CE64122C06C4B00511163 /* iOSNoteBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 475CE66E22C06C4D00511163 /* Build configuration list for PBXNativeTarget "iOSNoteBook" */;
+			buildPhases = (
+				68BF71DC17B4F8BA501C2932 /* [CP] Check Pods Manifest.lock */,
+				475CE63E22C06C4B00511163 /* Sources */,
+				475CE63F22C06C4B00511163 /* Frameworks */,
+				475CE64022C06C4B00511163 /* Resources */,
+				16E4BF19E76F17864D6EA77B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSNoteBook;
+			productName = iOSNoteBook;
+			productReference = 475CE64222C06C4B00511163 /* iOSNoteBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		475CE65922C06C4D00511163 /* iOSNoteBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 475CE67122C06C4D00511163 /* Build configuration list for PBXNativeTarget "iOSNoteBookTests" */;
+			buildPhases = (
+				A5526F8D245DFE8456365CA0 /* [CP] Check Pods Manifest.lock */,
+				475CE65622C06C4D00511163 /* Sources */,
+				475CE65722C06C4D00511163 /* Frameworks */,
+				475CE65822C06C4D00511163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				475CE65C22C06C4D00511163 /* PBXTargetDependency */,
+			);
+			name = iOSNoteBookTests;
+			productName = iOSNoteBookTests;
+			productReference = 475CE65A22C06C4D00511163 /* iOSNoteBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		475CE66422C06C4D00511163 /* iOSNoteBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 475CE67422C06C4D00511163 /* Build configuration list for PBXNativeTarget "iOSNoteBookUITests" */;
+			buildPhases = (
+				569AB44E6F48318DE9F3E50B /* [CP] Check Pods Manifest.lock */,
+				475CE66122C06C4D00511163 /* Sources */,
+				475CE66222C06C4D00511163 /* Frameworks */,
+				475CE66322C06C4D00511163 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				475CE66722C06C4D00511163 /* PBXTargetDependency */,
+			);
+			name = iOSNoteBookUITests;
+			productName = iOSNoteBookUITests;
+			productReference = 475CE66522C06C4D00511163 /* iOSNoteBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		475CE63A22C06C4A00511163 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = zjh;
+				TargetAttributes = {
+					475CE64122C06C4B00511163 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					475CE65922C06C4D00511163 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 475CE64122C06C4B00511163;
+					};
+					475CE66422C06C4D00511163 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 475CE64122C06C4B00511163;
+					};
+				};
+			};
+			buildConfigurationList = 475CE63D22C06C4A00511163 /* Build configuration list for PBXProject "iOSNoteBook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 475CE63922C06C4A00511163;
+			productRefGroup = 475CE64322C06C4B00511163 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				475CE64122C06C4B00511163 /* iOSNoteBook */,
+				475CE65922C06C4D00511163 /* iOSNoteBookTests */,
+				475CE66422C06C4D00511163 /* iOSNoteBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		475CE64022C06C4B00511163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475CE65222C06C4D00511163 /* LaunchScreen.storyboard in Resources */,
+				475CE64F22C06C4D00511163 /* Assets.xcassets in Resources */,
+				475CE64D22C06C4B00511163 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475CE65822C06C4D00511163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475CE66322C06C4D00511163 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16E4BF19E76F17864D6EA77B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSNoteBook/Pods-iOSNoteBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSNoteBook/Pods-iOSNoteBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSNoteBook/Pods-iOSNoteBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		569AB44E6F48318DE9F3E50B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSNoteBookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68BF71DC17B4F8BA501C2932 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSNoteBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5526F8D245DFE8456365CA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSNoteBookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		475CE63E22C06C4B00511163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475CE64A22C06C4B00511163 /* ViewController.m in Sources */,
+				475CE68022C0AE0700511163 /* RuntimeTest.m in Sources */,
+				475CE65522C06C4D00511163 /* main.m in Sources */,
+				475CE64722C06C4B00511163 /* AppDelegate.m in Sources */,
+				475CE67D22C06F9400511163 /* RuntimeKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475CE65622C06C4D00511163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475CE65F22C06C4D00511163 /* iOSNoteBookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		475CE66122C06C4D00511163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				475CE66A22C06C4D00511163 /* iOSNoteBookUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		475CE65C22C06C4D00511163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 475CE64122C06C4B00511163 /* iOSNoteBook */;
+			targetProxy = 475CE65B22C06C4D00511163 /* PBXContainerItemProxy */;
+		};
+		475CE66722C06C4D00511163 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 475CE64122C06C4B00511163 /* iOSNoteBook */;
+			targetProxy = 475CE66622C06C4D00511163 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		475CE64B22C06C4B00511163 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				475CE64C22C06C4B00511163 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		475CE65022C06C4D00511163 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				475CE65122C06C4D00511163 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		475CE66C22C06C4D00511163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		475CE66D22C06C4D00511163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		475CE66F22C06C4D00511163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E588A13956A38AD8A4A50AD4 /* Pods-iOSNoteBook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULEG3228R;
+				INFOPLIST_FILE = iOSNoteBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		475CE67022C06C4D00511163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B12B4B1DDBF319537BCFC5C /* Pods-iOSNoteBook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULEG3228R;
+				INFOPLIST_FILE = iOSNoteBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		475CE67222C06C4D00511163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 420563B9E8A9AC0C0B09E354 /* Pods-iOSNoteBookTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULEG3228R;
+				INFOPLIST_FILE = iOSNoteBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSNoteBook.app/iOSNoteBook";
+			};
+			name = Debug;
+		};
+		475CE67322C06C4D00511163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E9C6D8938DBFD7AE548A1C5 /* Pods-iOSNoteBookTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULEG3228R;
+				INFOPLIST_FILE = iOSNoteBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSNoteBook.app/iOSNoteBook";
+			};
+			name = Release;
+		};
+		475CE67522C06C4D00511163 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9590C0E4878A6991C668422 /* Pods-iOSNoteBookUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULEG3228R;
+				INFOPLIST_FILE = iOSNoteBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSNoteBook;
+			};
+			name = Debug;
+		};
+		475CE67622C06C4D00511163 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F23829099335EBB34B99EE6 /* Pods-iOSNoteBookUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GULEG3228R;
+				INFOPLIST_FILE = iOSNoteBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSNoteBook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		475CE63D22C06C4A00511163 /* Build configuration list for PBXProject "iOSNoteBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				475CE66C22C06C4D00511163 /* Debug */,
+				475CE66D22C06C4D00511163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		475CE66E22C06C4D00511163 /* Build configuration list for PBXNativeTarget "iOSNoteBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				475CE66F22C06C4D00511163 /* Debug */,
+				475CE67022C06C4D00511163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		475CE67122C06C4D00511163 /* Build configuration list for PBXNativeTarget "iOSNoteBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				475CE67222C06C4D00511163 /* Debug */,
+				475CE67322C06C4D00511163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		475CE67422C06C4D00511163 /* Build configuration list for PBXNativeTarget "iOSNoteBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				475CE67522C06C4D00511163 /* Debug */,
+				475CE67622C06C4D00511163 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 475CE63A22C06C4A00511163 /* Project object */;
+}
