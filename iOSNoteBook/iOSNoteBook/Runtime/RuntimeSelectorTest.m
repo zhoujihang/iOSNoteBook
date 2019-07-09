@@ -6,11 +6,11 @@
 //  Copyright © 2019年 zjh. All rights reserved.
 //
 
-#import "RuntimeTest.h"
+#import "RuntimeSelectorTest.h"
 #import <objc/runtime.h>
 #import "RuntimeKit.h"
 
-@implementation RuntimeTestBaseClass
+@implementation RuntimeSelectorTest_BaseClass
 
 - (void)baseFunc {
     NSLog(@"zjh base");
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation RuntimeTestSubClass
+@implementation RuntimeSelectorTest_SubClass
 
 - (void)func1 {
     NSLog(@"zjh func1");
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation RuntimeTestSubClass (Extension)
+@implementation RuntimeSelectorTest_SubClass (Extension)
 
 - (void)ext_func1 {
     NSLog(@"zjh ext_func1");
@@ -47,26 +47,26 @@
 @end
 
 
-@implementation RuntimeTest
+@implementation RuntimeSelectorTest
 
 + (void)load {
     /// 测试 实例方法交换
-    zjh_hookClass([RuntimeTestSubClass class], false,@selector(func1), @selector(ext_func1));
+    zjh_hookClass([RuntimeSelectorTest_SubClass class], false,@selector(func1), @selector(ext_func1));
     /// 测试 类方法交换
-    zjh_hookClass(object_getClass([RuntimeTestSubClass class]), true, @selector(classFunc), @selector(ext_classFunc));
+    zjh_hookClass(object_getClass([RuntimeSelectorTest_SubClass class]), true, @selector(classFunc), @selector(ext_classFunc));
     /// 测试 子类未实现的父类方法交换
-    zjh_hookClass([RuntimeTestSubClass class], false, @selector(baseFunc), @selector(ext_baseFunc));
+    zjh_hookClass([RuntimeSelectorTest_SubClass class], false, @selector(baseFunc), @selector(ext_baseFunc));
 }
 
 + (void)test {
-    RuntimeTestSubClass *instance = [RuntimeTestSubClass new];
+    RuntimeSelectorTest_SubClass *instance = [RuntimeSelectorTest_SubClass new];
     [instance func1];
     NSLog(@"--------------");
-    [RuntimeTestSubClass classFunc];
+    [RuntimeSelectorTest_SubClass classFunc];
     NSLog(@"--------------");
     [instance baseFunc];
     NSLog(@"--------------");
-    [[RuntimeTestBaseClass new] baseFunc];
+    [[RuntimeSelectorTest_BaseClass new] baseFunc];
 }
 
 @end

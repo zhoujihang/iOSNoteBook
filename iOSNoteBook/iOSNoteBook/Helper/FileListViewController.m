@@ -1,23 +1,21 @@
 //
-//  ViewController.m
+//  FileListViewController.m
 //  iOSNoteBook
 //
-//  Created by 周际航 on 2019/6/24.
+//  Created by 周际航 on 2019/7/9.
 //  Copyright © 2019年 zjh. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <Masonry/Masonry.h>
-#import "RuntimeSelectorTest.h"
-#import "RuntimeClassTest.h"
+#import "FileListViewController.h"
+#import "DisplayContentViewController.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FileListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong, nullable) UITableView *tableView;
 
 @end
 
-@implementation ViewController
+@implementation FileListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,16 +38,13 @@
     self.tableView.estimatedSectionFooterHeight = 0;
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.showsVerticalScrollIndicator = NO;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     [self.view addSubview:self.tableView];
 }
 
 - (void)setupFrame {
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+    self.tableView.frame = self.view.frame;
 }
 
 - (void)setupData {
@@ -62,20 +57,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.fileList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSString *text = [[NSString alloc] initWithFormat:@"%ld - %ld", indexPath.section, indexPath.row];
-    if (indexPath.row == 0) {
-        text = @"方法交换";
-    } else if (indexPath.row == 1) {
-        text = @"遍历 镜像 和 类";
-    } else if (indexPath.row == 2) {
-//        text = @"";
-    }
-    cell.textLabel.text = text;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.textLabel.text = [self.fileList[indexPath.row] xz_fileNameWithoutDirectory];
     return cell;
 }
 
@@ -97,23 +85,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SEL sel = NSSelectorFromString([NSString stringWithFormat:@"func%ld", indexPath.row]);
-    if ([self respondsToSelector:sel]) {
-        [self performSelector:sel];
-    }
-}
-
-- (void)func0 {
-    [RuntimeSelectorTest test];
-}
-
-- (void)func1 {
-    [RuntimeClassTest test];
-}
-
-- (void)func2 {
-    
+    DisplayContentViewController *vc = [[DisplayContentViewController alloc] init];
+    vc.content = [self.fileList[indexPath.row] xz_fileContent];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
-

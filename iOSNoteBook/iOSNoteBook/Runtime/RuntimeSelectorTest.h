@@ -10,20 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RuntimeTestBaseClass : NSObject
+@interface RuntimeSelectorTest_BaseClass : NSObject
 
 - (void)baseFunc;
 
 @end
 
-@interface RuntimeTestSubClass : RuntimeTestBaseClass
+@interface RuntimeSelectorTest_SubClass : RuntimeSelectorTest_BaseClass
 
 - (void)func1;
 + (void)classFunc;
 
 @end
 
-@interface RuntimeTestSubClass (Extension)
+@interface RuntimeSelectorTest_SubClass (Extension)
 
 - (void)ext_baseFunc;
 - (void)ext_func1;
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface RuntimeTest : NSObject
+@interface RuntimeSelectorTest : NSObject
 
 + (void)test;
 

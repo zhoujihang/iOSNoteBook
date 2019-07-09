@@ -21,11 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 FOUNDATION_EXTERN void zjh_hookClass(Class cls, bool hookClassSelector, SEL fromSelector, SEL toSelector);
 
-/**
- 遍历所有的类
- @param ^callback 回调
- */
+/// 遍历所有的类
 FOUNDATION_EXTERN void zjh_enumerateAllClass(void (^callback)(Class cls));
-
+/// 遍历所有的image
+FOUNDATION_EXTERN void zjh_enumerateAllImage(void (^callback)(NSString *imagePath));
+/// 遍历指定 image 中的 class
+FOUNDATION_EXTERN void zjh_enumerateAllClassForImage(NSString *imagePath, void (^callback)(Class cls));
+/// 遍历所有 image 中的 class
+FOUNDATION_EXTERN void zjh_enumerateAllClassOrderbyImage(void (^callback)(NSString *image, Class cls));
 
 NS_ASSUME_NONNULL_END

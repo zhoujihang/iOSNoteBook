@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  iOSNoteBook
+//
+//  Created by 周际航 on 2019/7/9.
+//  Copyright © 2019年 zjh. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "NSString+File.h"
+#import "UIWindow+Extension.h"
+
+#endif /* PrefixHeader_pch */
