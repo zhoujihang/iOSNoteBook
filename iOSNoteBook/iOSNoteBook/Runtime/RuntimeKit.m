@@ -8,6 +8,7 @@
 
 #import "RuntimeKit.h"
 #import <objc/runtime.h>
+#import <mach-o/getsect.h>
 #import <mach-o/dyld.h>
 #import <dlfcn.h>
 
@@ -79,3 +80,43 @@ void zjh_enumerateAllClassOrderbyImage(void (^callback)(NSString *image, Class c
         });
     });
 }
+
+#pragma mark - MachO 文件
+void zjh_enumerateMachImages(void(^handler)(const mach_header_xx *mh, const char *path)) {
+    if (handler == nil) {return;}
+    uint32_t count = _dyld_image_count();
+    for (uint32_t i = 0; i < count; i++) {
+        handler((const mach_header_xx *)_dyld_get_image_header(i), _dyld_get_image_name(i));
+    }
+}
+
+void zjh_enumerateClassesInMachImage(const mach_header_xx *mh, const char *sectionName, void(^handler)(Class __unsafe_unretained aClass)) {
+    if (handler == nil) {return;}
+#ifndef __LP64__
+    const struct section *section = getsectbynamefromheader(mh, "__DATA", sectionName);
+    if (section == NULL) {return;}
+    uint32_t size = section->size;
+#else
+    const struct section_64 *section = getsectbynamefromheader_64(mh, "__DATA", sectionName);
+    if (section == NULL) {return;}
+    uint64_t size = section->size;
+#endif
+    char *imageBaseAddress = (char *)mh;
+    Class *classReferences = (Class *)(void *)(imageBaseAddress + ((uintptr_t)section->offset&0xffffffff));
+    NSInteger count = size/sizeof(void *);
+    for (unsigned long i = 0; i < count; i++) {
+        Class aClass = classReferences[i];
+        if (aClass) {handler(aClass);}
+    }
+}
+
+void zjh_enumerateClassesInMachImage__objc_classlist(const mach_header_xx *mh, void(^handler)(Class __unsafe_unretained aClass)) {
+    zjh_enumerateClassesInMachImage(mh, "__objc_classlist", handler);
+}
+void zjh_enumerateClassesInMachImage__objc_classrefs(const mach_header_xx *mh, void(^handler)(Class __unsafe_unretained aClass)) {
+//    NSArray *ignoreList = @[@"/Applications/Xcode.app/", @"/usr/lib/", @"/System/Library/", @"/Developer/Library/"];
+    /// 遍历 __objc_classrefs 时，有许多系统 image 读取 class 结构时会崩溃，需要过滤。
+    zjh_enumerateClassesInMachImage(mh, "__objc_classrefs", handler);
+}
+
+

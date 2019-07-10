@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#ifndef __LP64__
+typedef struct mach_header mach_header_xx;
+#else
+typedef struct mach_header_64 mach_header_xx;
+#endif
+
 #pragma mark - method swizzled
 
 /**
@@ -29,5 +35,12 @@ FOUNDATION_EXTERN void zjh_enumerateAllImage(void (^callback)(NSString *imagePat
 FOUNDATION_EXTERN void zjh_enumerateAllClassForImage(NSString *imagePath, void (^callback)(Class cls));
 /// 遍历所有 image 中的 class
 FOUNDATION_EXTERN void zjh_enumerateAllClassOrderbyImage(void (^callback)(NSString *image, Class cls));
+
+/// 遍历MachO中记载的所有的 image
+FOUNDATION_EXTERN void zjh_enumerateMachImages(void(^handler)(const mach_header_xx *mh, const char *path));
+/// 遍历MachO中记载的所有的 image 在 section段 __objc_classlist 中存储的class记录
+void zjh_enumerateClassesInMachImage__objc_classlist(const mach_header_xx *mh, void(^handler)(Class __unsafe_unretained aClass));
+/// 遍历MachO中记载的所有的 image 在 section段 __objc_classrefs 中存储的class记录
+void zjh_enumerateClassesInMachImage__objc_classrefs(const mach_header_xx *mh, void(^handler)(Class __unsafe_unretained aClass));
 
 NS_ASSUME_NONNULL_END
