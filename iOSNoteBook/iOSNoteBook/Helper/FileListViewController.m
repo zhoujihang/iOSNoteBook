@@ -63,7 +63,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.textLabel.text = [self.fileList[indexPath.row] xz_fileNameWithoutDirectory];
+    cell.textLabel.text = [self.fileList[indexPath.row] ext_fileNameWithoutDirectory];
     return cell;
 }
 
@@ -86,7 +86,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DisplayContentViewController *vc = [[DisplayContentViewController alloc] init];
-    vc.content = [self.fileList[indexPath.row] xz_fileContent];
+    vc.content = [self.fileList[indexPath.row] ext_fileContent];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

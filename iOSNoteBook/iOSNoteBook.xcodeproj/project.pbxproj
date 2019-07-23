@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472D23E522DEC79400789405 /* RuntimeProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23E422DEC79400789405 /* RuntimeProtocolTest.m */; };
+		472D23EC22E6B29100789405 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23EB22E6B29100789405 /* UIImage+Extension.m */; };
+		472D23F022E7054500789405 /* TestImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23EF22E7054500789405 /* TestImageViewController.m */; };
 		475CE64722C06C4B00511163 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE64622C06C4B00511163 /* AppDelegate.m */; };
 		475CE64A22C06C4B00511163 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE64922C06C4B00511163 /* ViewController.m */; };
 		475CE64D22C06C4B00511163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475CE64B22C06C4B00511163 /* Main.storyboard */; };
@@ -50,6 +53,12 @@
 		2F537EBECAA1A78F0DBB59D4 /* Pods_iOSNoteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSNoteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3309FB46E3BA284BE1973D75 /* Pods_iOSNoteBookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSNoteBookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		420563B9E8A9AC0C0B09E354 /* Pods-iOSNoteBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSNoteBookTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSNoteBookTests/Pods-iOSNoteBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		472D23E322DEC79400789405 /* RuntimeProtocolTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeProtocolTest.h; sourceTree = "<group>"; };
+		472D23E422DEC79400789405 /* RuntimeProtocolTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeProtocolTest.m; sourceTree = "<group>"; };
+		472D23EA22E6B29100789405 /* UIImage+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		472D23EB22E6B29100789405 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		472D23EE22E7054500789405 /* TestImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestImageViewController.h; sourceTree = "<group>"; };
+		472D23EF22E7054500789405 /* TestImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestImageViewController.m; sourceTree = "<group>"; };
 		475CE64222C06C4B00511163 /* iOSNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475CE64522C06C4B00511163 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		475CE64622C06C4B00511163 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		472D23ED22E7052300789405 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				472D23EE22E7054500789405 /* TestImageViewController.h */,
+				472D23EF22E7054500789405 /* TestImageViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		475CE63922C06C4A00511163 = {
 			isa = PBXGroup;
 			children = (
@@ -196,10 +214,13 @@
 		4775E27322D46D4A00EBBCE9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				472D23ED22E7052300789405 /* Test */,
 				4775E27422D46E2F00EBBCE9 /* NSString+File.h */,
 				4775E27522D46E2F00EBBCE9 /* NSString+File.m */,
 				4775E27F22D47CE000EBBCE9 /* UIWindow+Extension.h */,
 				4775E28022D47CE000EBBCE9 /* UIWindow+Extension.m */,
+				472D23EA22E6B29100789405 /* UIImage+Extension.h */,
+				472D23EB22E6B29100789405 /* UIImage+Extension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -222,6 +243,8 @@
 				4775E2AC22D5839500EBBCE9 /* RuntimeClassTest.m */,
 				4775E2AA22D5839500EBBCE9 /* RuntimeSelectorTest.h */,
 				4775E2AB22D5839500EBBCE9 /* RuntimeSelectorTest.m */,
+				472D23E322DEC79400789405 /* RuntimeProtocolTest.h */,
+				472D23E422DEC79400789405 /* RuntimeProtocolTest.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -472,8 +495,11 @@
 				475CE64A22C06C4B00511163 /* ViewController.m in Sources */,
 				4775E28122D47CE000EBBCE9 /* UIWindow+Extension.m in Sources */,
 				4775E27622D46E2F00EBBCE9 /* NSString+File.m in Sources */,
+				472D23EC22E6B29100789405 /* UIImage+Extension.m in Sources */,
 				4775E2AE22D5839500EBBCE9 /* RuntimeSelectorTest.m in Sources */,
 				475CE65522C06C4D00511163 /* main.m in Sources */,
+				472D23E522DEC79400789405 /* RuntimeProtocolTest.m in Sources */,
+				472D23F022E7054500789405 /* TestImageViewController.m in Sources */,
 				4775E2AF22D5839500EBBCE9 /* RuntimeClassTest.m in Sources */,
 				475CE64722C06C4B00511163 /* AppDelegate.m in Sources */,
 				4775E27E22D47AE200EBBCE9 /* DisplayContentViewController.m in Sources */,
@@ -651,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = GULEG3228R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/iOSNoteBook/PrefixHeader.pch";
@@ -671,6 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = GULEG3228R;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/iOSNoteBook/PrefixHeader.pch";

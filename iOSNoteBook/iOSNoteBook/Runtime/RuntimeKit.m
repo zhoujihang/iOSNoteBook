@@ -119,4 +119,19 @@ void zjh_enumerateClassesInMachImage__objc_classrefs(const mach_header_xx *mh, v
     zjh_enumerateClassesInMachImage(mh, "__objc_classrefs", handler);
 }
 
-
+void zjh_enumerateProtocol(Protocol *protocol, void (^handle)(SEL sel, BOOL isRequiredMethod, BOOL isInstanceMethod)) {
+    if (!handle) {return;}
+    unsigned int count = 0;
+    struct objc_method_description *list1 = protocol_copyMethodDescriptionList(protocol, YES, YES, &count);
+    for (unsigned int i=0; i<count; i++) {handle(list1[i].name, YES, YES);}
+    struct objc_method_description *list2 = protocol_copyMethodDescriptionList(protocol, YES, NO, &count);
+    for (unsigned int i=0; i<count; i++) {handle(list2[i].name, YES, NO);}
+    struct objc_method_description *list3 = protocol_copyMethodDescriptionList(protocol, NO, YES, &count);
+    for (unsigned int i=0; i<count; i++) {handle(list3[i].name, NO, YES);}
+    struct objc_method_description *list4 = protocol_copyMethodDescriptionList(protocol, NO, NO, &count);
+    for (unsigned int i=0; i<count; i++) {handle(list4[i].name, NO, NO);}
+    free(list1);
+    free(list2);
+    free(list3);
+    free(list4);
+}

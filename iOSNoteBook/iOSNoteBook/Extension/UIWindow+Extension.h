@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIWindow (Extension)
 
-+ (UIViewController *)getCurrentRootViewController;
-+ (UIViewController *)getActiveController;
-+ (UIViewController *)getActiveControllerWithoutPresented;
++ (UIViewController *)ext_getCurrentRootViewController;
++ (UIViewController *)ext_getActiveController;
++ (UIViewController *)ext_getActiveControllerWithoutPresented;
 
 @end
 

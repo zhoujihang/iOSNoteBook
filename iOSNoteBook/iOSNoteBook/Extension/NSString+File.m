@@ -10,17 +10,17 @@
 
 @implementation NSString (File)
 
-+ (NSString *)xz_documentDirectory {
++ (NSString *)ext_documentDirectory {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
-+ (NSString *)xz_cachesDirectory {
++ (NSString *)ext_cachesDirectory {
     return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
 }
-+ (NSString *)xz_tempDirectory {
++ (NSString *)ext_tempDirectory {
     return NSTemporaryDirectory();
 }
 
-- (BOOL)xz_createDirectory {
+- (BOOL)ext_createDirectory {
     if (![[NSFileManager defaultManager] fileExistsAtPath:self]) {
         BOOL result = [[NSFileManager defaultManager] createDirectoryAtPath:self withIntermediateDirectories:YES attributes:nil error:nil];
         return result;
@@ -29,62 +29,62 @@
     }
 }
 
-- (NSString *)xz_fileContent {
+- (NSString *)ext_fileContent {
     return [[NSString alloc] initWithContentsOfFile:self encoding:NSUTF8StringEncoding error:NULL];
 }
 
-- (BOOL)xz_writeToFile:(NSString *)path {
+- (BOOL)ext_writeToFile:(NSString *)path {
     return [self writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
-- (BOOL)xz_removeItem {
+- (BOOL)ext_removeItem {
     return [[NSFileManager defaultManager] removeItemAtPath:self error:nil];
 }
 
-- (BOOL)xz_isExistItem {
+- (BOOL)ext_isExistItem {
     return [[NSFileManager defaultManager] fileExistsAtPath:self];
 }
 
-- (NSString *)xz_fileNameWithoutDirectory {
+- (NSString *)ext_fileNameWithoutDirectory {
     NSArray *pathArr = [self componentsSeparatedByString:@"/"];
     NSString *fileName = pathArr.lastObject ?: self;
     return fileName;
 }
 
-- (NSString *)xz_directoryPathWithoutFileName {
+- (NSString *)ext_directoryPathWithoutFileName {
     return [self stringByDeletingLastPathComponent];
 }
 
-- (NSString *)xz_appendingPathComponent:(NSString *)path {
+- (NSString *)ext_appendingPathComponent:(NSString *)path {
     return [self stringByAppendingPathComponent:path];
 }
 
-- (NSString *)xz_appendToDocumentPath {
-    NSString *documentPath = [NSString xz_documentDirectory];
+- (NSString *)ext_appendToDocumentPath {
+    NSString *documentPath = [NSString ext_documentDirectory];
     if (![self hasPrefix:documentPath]) {
-        return [documentPath xz_appendingPathComponent:self];
+        return [documentPath ext_appendingPathComponent:self];
     } else {
         return self;
     }
 }
-- (NSString *)xz_appendToCachesPath {
-    NSString *cachesPath = [NSString xz_cachesDirectory];
+- (NSString *)ext_appendToCachesPath {
+    NSString *cachesPath = [NSString ext_cachesDirectory];
     if (![self hasPrefix:cachesPath]) {
-        return [cachesPath xz_appendingPathComponent:self];
+        return [cachesPath ext_appendingPathComponent:self];
     } else {
         return self;
     }
 }
-- (NSString *)xz_appendToTempPath {
-    NSString *tempPath = [NSString xz_tempDirectory];
+- (NSString *)ext_appendToTempPath {
+    NSString *tempPath = [NSString ext_tempDirectory];
     if (![self hasPrefix:tempPath]) {
-        return [tempPath xz_appendingPathComponent:self];
+        return [tempPath ext_appendingPathComponent:self];
     } else {
         return self;
     }
 }
 
-- (NSArray<NSString *> *)xz_contentNameList {
+- (NSArray<NSString *> *)ext_contentNameList {
     return [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self error:nil];
 }
 

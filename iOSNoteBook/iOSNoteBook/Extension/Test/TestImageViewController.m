@@ -1,25 +1,23 @@
 //
-//  ViewController.m
+//  TestImageViewController.m
 //  iOSNoteBook
 //
-//  Created by 周际航 on 2019/6/24.
+//  Created by 周际航 on 2019/7/23.
 //  Copyright © 2019年 zjh. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <Masonry/Masonry.h>
-#import "RuntimeSelectorTest.h"
-#import "RuntimeClassTest.h"
-#import "RuntimeProtocolTest.h"
 #import "TestImageViewController.h"
+#import "UIImage+Extension.h"
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TestImageViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong, nullable) UITableView *tableView;
+@property (nonatomic, strong, nullable) UIImageView *imgView;
+@property (nonatomic, strong, nullable) UIImageView *maskImgView;
 
 @end
 
-@implementation ViewController
+@implementation TestImageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,7 +43,17 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
+    self.imgView = [[UIImageView alloc] init];
+    self.imgView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imgView.clipsToBounds = YES;
+    
+    self.maskImgView = [[UIImageView alloc] init];
+    self.maskImgView.contentMode = UIViewContentModeScaleAspectFill;
+    self.maskImgView.clipsToBounds = YES;
+    
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.imgView];
+    [self.view addSubview:self.maskImgView];
 }
 
 - (void)setupFrame {
@@ -71,13 +79,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NSString *text = [[NSString alloc] initWithFormat:@"%ld - %ld", indexPath.section, indexPath.row];
     if (indexPath.row == 0) {
-        text = @"方法交换";
+        text = @"测试 1";
     } else if (indexPath.row == 1) {
-        text = @"遍历 镜像 和 类";
+        text = @"测试 2";
     } else if (indexPath.row == 2) {
-        text = @"打印协议中的方法";
-    } else if (indexPath.row == 3) {
-        text = @"分类测试 - UIImage";
+        text = @"测试 3";
     }
     cell.textLabel.text = text;
     return cell;
@@ -103,26 +109,52 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     SEL sel = NSSelectorFromString([NSString stringWithFormat:@"func%ld", indexPath.row]);
     if ([self respondsToSelector:sel]) {
+        [self func_setup];
         [self performSelector:sel];
+        [self func_teardown];
     }
 }
 
+- (void)func_setup {
+    self.imgView.frame = CGRectMake(200, 400, 100, 100);
+    self.maskImgView.frame = CGRectMake(200, 400, 100, 100);
+    self.imgView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imgView.clipsToBounds = YES;
+    self.maskImgView.contentMode = UIViewContentModeScaleAspectFill;
+    self.maskImgView.clipsToBounds = YES;
+}
+- (void)func_teardown {
+    
+}
+
 - (void)func0 {
-    [RuntimeSelectorTest test];
+    self.imgView.image = [UIImage ext_resizeImageWithName:@"死神狂潮"];
+    self.maskImgView.image = nil;
 }
-
 - (void)func1 {
-    [RuntimeClassTest test];
+    self.imgView.image = [[UIImage imageNamed:@"死神狂潮"] ext_resizeImage];
+    self.maskImgView.image = nil;
 }
-
 - (void)func2 {
-    [RuntimeProtocolTest test];
+    self.imgView.image = [UIImage ext_imageWithColor:[UIColor cyanColor]];
+    self.maskImgView.image = nil;
 }
-
 - (void)func3 {
-    TestImageViewController *vc = [[TestImageViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    self.imgView.image = [UIImage imageNamed:@"奥特曼"];
+    self.maskImgView.image = [UIImage ext_circleTransparentImageWithDiameter:20];
+}
+- (void)func4 {
+    self.imgView.image = [UIImage imageNamed:@"奥特曼"];
+    self.maskImgView.image = [UIImage ext_imageWithSize:CGSizeMake(100, 100) cornerRadius:30 rectCorner:UIRectCornerTopLeft|UIRectCornerTopRight fillColor:[UIColor clearColor] radiusColor:[UIColor greenColor]];
+}
+- (void)func5 {
+    self.imgView.image = [[UIImage imageNamed:@"亲吻"] ext_circleImage];
+    self.maskImgView.image = nil;
+}
+- (void)func6 {
+    self.imgView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imgView.image = [[UIImage imageNamed:@"旅行"] ext_ovalImage];
+    self.maskImgView.image = nil;
 }
 
 @end
-

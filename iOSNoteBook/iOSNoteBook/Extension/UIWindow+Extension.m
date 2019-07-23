@@ -20,7 +20,7 @@
     return root;
 }
 
-+ (UIViewController *)getCurrentRootViewController {
++ (UIViewController *)ext_getCurrentRootViewController {
     UIViewController *result;
     UIWindow *topWindow = [[UIApplication sharedApplication] keyWindow];
     if (topWindow.windowLevel != UIWindowLevelNormal) {
@@ -44,7 +44,7 @@
     return result;
 }
 
-+ (UIViewController *)getActiveController {
++ (UIViewController *)ext_getActiveController {
     NSArray *windows = [UIApplication sharedApplication].windows;
     UIWindow *normalWindow;
     for (UIWindow *window in windows) {
@@ -70,7 +70,7 @@
     }
 }
 
-+ (UIViewController *)getActiveControllerWithoutPresented {
++ (UIViewController *)ext_getActiveControllerWithoutPresented {
     UIViewController *controller = [self rootWindow].rootViewController;
     if ([controller isKindOfClass:[UITabBarController class]]) {
         UITabBarController *tab = (UITabBarController *)controller;
