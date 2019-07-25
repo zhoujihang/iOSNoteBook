@@ -10,6 +10,10 @@
 		472D23E522DEC79400789405 /* RuntimeProtocolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23E422DEC79400789405 /* RuntimeProtocolTest.m */; };
 		472D23EC22E6B29100789405 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23EB22E6B29100789405 /* UIImage+Extension.m */; };
 		472D23F022E7054500789405 /* TestImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23EF22E7054500789405 /* TestImageViewController.m */; };
+		472D23F922E8450200789405 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23F822E8450200789405 /* NSAttributedString+Extension.m */; };
+		472D23FC22E8483500789405 /* NSURL+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23FB22E8483500789405 /* NSURL+Extension.m */; };
+		472D23FF22E84C3D00789405 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D23FE22E84C3D00789405 /* NSDictionary+Log.m */; };
+		472D240222E84C4C00789405 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 472D240122E84C4C00789405 /* NSArray+Log.m */; };
 		475CE64722C06C4B00511163 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE64622C06C4B00511163 /* AppDelegate.m */; };
 		475CE64A22C06C4B00511163 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE64922C06C4B00511163 /* ViewController.m */; };
 		475CE64D22C06C4B00511163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475CE64B22C06C4B00511163 /* Main.storyboard */; };
@@ -19,7 +23,7 @@
 		475CE65F22C06C4D00511163 /* iOSNoteBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE65E22C06C4D00511163 /* iOSNoteBookTests.m */; };
 		475CE66A22C06C4D00511163 /* iOSNoteBookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE66922C06C4D00511163 /* iOSNoteBookUITests.m */; };
 		475CE67D22C06F9400511163 /* RuntimeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 475CE67C22C06F9400511163 /* RuntimeKit.m */; };
-		4775E27622D46E2F00EBBCE9 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 4775E27522D46E2F00EBBCE9 /* NSString+File.m */; };
+		4775E27622D46E2F00EBBCE9 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4775E27522D46E2F00EBBCE9 /* NSString+Extension.m */; };
 		4775E27B22D479A100EBBCE9 /* FileListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4775E27A22D479A100EBBCE9 /* FileListViewController.m */; };
 		4775E27E22D47AE200EBBCE9 /* DisplayContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4775E27D22D47AE200EBBCE9 /* DisplayContentViewController.m */; };
 		4775E28122D47CE000EBBCE9 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4775E28022D47CE000EBBCE9 /* UIWindow+Extension.m */; };
@@ -59,6 +63,14 @@
 		472D23EB22E6B29100789405 /* UIImage+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		472D23EE22E7054500789405 /* TestImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestImageViewController.h; sourceTree = "<group>"; };
 		472D23EF22E7054500789405 /* TestImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestImageViewController.m; sourceTree = "<group>"; };
+		472D23F722E8450200789405 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
+		472D23F822E8450200789405 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
+		472D23FA22E8483500789405 /* NSURL+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+Extension.h"; sourceTree = "<group>"; };
+		472D23FB22E8483500789405 /* NSURL+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Extension.m"; sourceTree = "<group>"; };
+		472D23FD22E84C3D00789405 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
+		472D23FE22E84C3D00789405 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
+		472D240022E84C4C00789405 /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		472D240122E84C4C00789405 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		475CE64222C06C4B00511163 /* iOSNoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSNoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		475CE64522C06C4B00511163 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		475CE64622C06C4B00511163 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,8 +89,8 @@
 		475CE66B22C06C4D00511163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		475CE67B22C06F9400511163 /* RuntimeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeKit.h; sourceTree = "<group>"; };
 		475CE67C22C06F9400511163 /* RuntimeKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeKit.m; sourceTree = "<group>"; };
-		4775E27422D46E2F00EBBCE9 /* NSString+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+File.h"; sourceTree = "<group>"; };
-		4775E27522D46E2F00EBBCE9 /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
+		4775E27422D46E2F00EBBCE9 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		4775E27522D46E2F00EBBCE9 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		4775E27722D46E6000EBBCE9 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4775E27922D479A100EBBCE9 /* FileListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileListViewController.h; sourceTree = "<group>"; };
 		4775E27A22D479A100EBBCE9 /* FileListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileListViewController.m; sourceTree = "<group>"; };
@@ -215,12 +227,20 @@
 			isa = PBXGroup;
 			children = (
 				472D23ED22E7052300789405 /* Test */,
-				4775E27422D46E2F00EBBCE9 /* NSString+File.h */,
-				4775E27522D46E2F00EBBCE9 /* NSString+File.m */,
+				4775E27422D46E2F00EBBCE9 /* NSString+Extension.h */,
+				4775E27522D46E2F00EBBCE9 /* NSString+Extension.m */,
 				4775E27F22D47CE000EBBCE9 /* UIWindow+Extension.h */,
 				4775E28022D47CE000EBBCE9 /* UIWindow+Extension.m */,
 				472D23EA22E6B29100789405 /* UIImage+Extension.h */,
 				472D23EB22E6B29100789405 /* UIImage+Extension.m */,
+				472D23F722E8450200789405 /* NSAttributedString+Extension.h */,
+				472D23F822E8450200789405 /* NSAttributedString+Extension.m */,
+				472D23FA22E8483500789405 /* NSURL+Extension.h */,
+				472D23FB22E8483500789405 /* NSURL+Extension.m */,
+				472D23FD22E84C3D00789405 /* NSDictionary+Log.h */,
+				472D23FE22E84C3D00789405 /* NSDictionary+Log.m */,
+				472D240022E84C4C00789405 /* NSArray+Log.h */,
+				472D240122E84C4C00789405 /* NSArray+Log.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -493,8 +513,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				475CE64A22C06C4B00511163 /* ViewController.m in Sources */,
+				472D23FF22E84C3D00789405 /* NSDictionary+Log.m in Sources */,
 				4775E28122D47CE000EBBCE9 /* UIWindow+Extension.m in Sources */,
-				4775E27622D46E2F00EBBCE9 /* NSString+File.m in Sources */,
+				472D23FC22E8483500789405 /* NSURL+Extension.m in Sources */,
+				472D240222E84C4C00789405 /* NSArray+Log.m in Sources */,
+				4775E27622D46E2F00EBBCE9 /* NSString+Extension.m in Sources */,
+				472D23F922E8450200789405 /* NSAttributedString+Extension.m in Sources */,
 				472D23EC22E6B29100789405 /* UIImage+Extension.m in Sources */,
 				4775E2AE22D5839500EBBCE9 /* RuntimeSelectorTest.m in Sources */,
 				475CE65522C06C4D00511163 /* main.m in Sources */,
@@ -676,6 +700,7 @@
 			baseConfigurationReference = E588A13956A38AD8A4A50AD4 /* Pods-iOSNoteBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = GULEG3228R;
@@ -688,6 +713,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -697,6 +723,7 @@
 			baseConfigurationReference = 4B12B4B1DDBF319537BCFC5C /* Pods-iOSNoteBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEPLOYMENT_POSTPROCESSING = NO;
 				DEVELOPMENT_TEAM = GULEG3228R;
@@ -709,6 +736,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zjh.iOSNoteBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

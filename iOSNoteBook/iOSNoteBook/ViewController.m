@@ -12,6 +12,7 @@
 #import "RuntimeClassTest.h"
 #import "RuntimeProtocolTest.h"
 #import "TestImageViewController.h"
+#import "NSURL+Extension.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -122,6 +123,15 @@
 - (void)func3 {
     TestImageViewController *vc = [[TestImageViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)func4 {
+    NSString *str = @"https://www.google.com.hk/search?safe=strict&biw=1920&bih=897&ei=ORE4XenaEe6umAXhqp3ICA&q=ios+url+encode&oq=ios++url+&gs_l=psy-ab.3.1.0l10.86626.91769..93612...3.0..0.241.2298.0j10j3......0....1..gws-wiz.....0..0i10j0i12j0i30j0i8i30j0i5i30.ujS1cPbBxIA&name=%e5%b0%8f%e7%ba%a2123";
+    NSURL *url = [NSURL URLWithString:str];
+    NSDictionary *dic1 = [url ext_queryParameters];
+    NSDictionary *dic2 = [url ext_queryParametersDecoded];
+    NSLog(@"dic1:%@", dic1);
+    NSLog(@"dic2:%@", dic2);
 }
 
 @end

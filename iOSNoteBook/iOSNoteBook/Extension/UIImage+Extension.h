@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)ext_resizeImageWithName:(NSString *)name;
 + (UIImage *)ext_resizeImageWithName:(NSString *)name capInsets:(UIEdgeInsets)insets;
 
+- (UIImage *)ext_imageWithScale:(CGFloat)scale;
+- (UIImage *)ext_imageWithSize:(CGSize)size;
+
 #pragma mark - 创造图片
 + (UIImage *)ext_imageWithView:(UIView *)view;
 + (UIImage *)ext_imageWithColor:(UIColor *)color;
@@ -26,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIImage *)ext_imageWithSize:(CGSize)size cornerRadius:(CGFloat)radius rectCorner:(UIRectCorner)corner fillColor:(UIColor *)fillColor radiusColor:(UIColor *)radiusColor;
 + (UIImage *)ext_circleTransparentImageWithDiameter:(CGFloat)diameter radiusColor:(UIColor *)color;
 + (UIImage *)ext_circleTransparentImageWithDiameter:(CGFloat)diameter;
++ (UIImage *)ext_gradientImageWithSize:(CGSize)size startColor:(UIColor *)sc endColor:(UIColor *)ec startPoint:(CGPoint)sp endPoint:(CGPoint)ep;
+
 
 #pragma mark - 图片裁剪
 /// 裁一个圆形图片 正中间

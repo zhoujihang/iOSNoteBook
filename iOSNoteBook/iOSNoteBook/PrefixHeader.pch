@@ -9,7 +9,7 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import "NSString+File.h"
+#import "NSString+Extension.h"
 #import "UIWindow+Extension.h"
 #import "Masonry.h"
 

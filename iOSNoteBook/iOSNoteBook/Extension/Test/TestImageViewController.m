@@ -78,13 +78,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NSString *text = [[NSString alloc] initWithFormat:@"%ld - %ld", indexPath.section, indexPath.row];
-    if (indexPath.row == 0) {
-        text = @"测试 1";
-    } else if (indexPath.row == 1) {
-        text = @"测试 2";
-    } else if (indexPath.row == 2) {
-        text = @"测试 3";
-    }
     cell.textLabel.text = text;
     return cell;
 }
@@ -120,8 +113,10 @@
     self.maskImgView.frame = CGRectMake(200, 400, 100, 100);
     self.imgView.contentMode = UIViewContentModeScaleAspectFill;
     self.imgView.clipsToBounds = YES;
+    self.imgView.image = nil;
     self.maskImgView.contentMode = UIViewContentModeScaleAspectFill;
     self.maskImgView.clipsToBounds = YES;
+    self.maskImgView.image = nil;
 }
 - (void)func_teardown {
     
@@ -129,15 +124,12 @@
 
 - (void)func0 {
     self.imgView.image = [UIImage ext_resizeImageWithName:@"死神狂潮"];
-    self.maskImgView.image = nil;
 }
 - (void)func1 {
     self.imgView.image = [[UIImage imageNamed:@"死神狂潮"] ext_resizeImage];
-    self.maskImgView.image = nil;
 }
 - (void)func2 {
     self.imgView.image = [UIImage ext_imageWithColor:[UIColor cyanColor]];
-    self.maskImgView.image = nil;
 }
 - (void)func3 {
     self.imgView.image = [UIImage imageNamed:@"奥特曼"];
@@ -149,12 +141,17 @@
 }
 - (void)func5 {
     self.imgView.image = [[UIImage imageNamed:@"亲吻"] ext_circleImage];
-    self.maskImgView.image = nil;
 }
 - (void)func6 {
     self.imgView.contentMode = UIViewContentModeScaleAspectFit;
     self.imgView.image = [[UIImage imageNamed:@"旅行"] ext_ovalImage];
-    self.maskImgView.image = nil;
+}
+- (void)func7 {
+    self.imgView.image = [UIImage ext_gradientImageWithSize:CGSizeMake(100, 100) startColor:[UIColor redColor] endColor:[UIColor blueColor] startPoint:CGPointMake(0, 0) endPoint:CGPointMake(100, 100)];
+}
+- (void)func8 {
+    self.imgView.frame = CGRectMake(200, 200, 200, 400);
+    self.imgView.image = [UIImage ext_imageWithView:self.navigationController.view];
 }
 
 @end

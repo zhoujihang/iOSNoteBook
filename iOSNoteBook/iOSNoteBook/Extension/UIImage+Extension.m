@@ -28,6 +28,23 @@
     return [image resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
 }
 
+- (UIImage *)ext_imageWithSize:(CGSize)size {
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(size.width, size.height), NO, 0);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+- (UIImage *)ext_imageWithScale:(CGFloat)scale {
+    CGFloat width = self.size.width * scale;
+    CGFloat height = self.size.height * scale;
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(width, height), NO, 0);
+    [self drawInRect:CGRectMake(0, 0, width, height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 + (UIImage *)ext_imageWithView:(UIView *)view {
     if (!view) {return nil;}
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0);
@@ -73,6 +90,23 @@
 }
 + (UIImage *)ext_circleTransparentImageWithDiameter:(CGFloat)diameter {
     return [self ext_imageWithSize:CGSizeMake(diameter, diameter) cornerRadius:diameter rectCorner:UIRectCornerAllCorners fillColor:[UIColor clearColor] radiusColor:[UIColor whiteColor]];
+}
+
++ (UIImage *)ext_gradientImageWithSize:(CGSize)size startColor:(UIColor *)sc endColor:(UIColor *)ec startPoint:(CGPoint)sp endPoint:(CGPoint)ep {
+    if (size.width <= 0 || size.height <= 0) { return nil; }
+    if (sc == nil || ec == nil) { return nil; }
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CFArrayRef colors = (__bridge CFArrayRef)@[(__bridge id)sc.CGColor, (__bridge id)ec.CGColor];
+    CGFloat locations[] = {0, 1};
+    CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, colors, locations);
+    CGContextDrawLinearGradient(ctx, gradient, sp, ep, kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    CGColorSpaceRelease(colorSpace);
+    CGGradientRelease(gradient);
+    return image;
 }
 
 - (UIImage *)ext_circleImage {
